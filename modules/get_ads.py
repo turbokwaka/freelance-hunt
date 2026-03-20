@@ -1,4 +1,4 @@
-from load_django import *
+from .load_django import *
 from parser_app.models import Ad
 from telegram_notify import send_ad_notification
 

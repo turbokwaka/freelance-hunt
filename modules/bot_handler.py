@@ -14,10 +14,7 @@ from pprint import pprint
 
 import django
 
-# Bootstrap Django so we can query the DB
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'freelancehunt_project')))
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'freelancehunt_project.settings')
-django.setup()
+from .load_django import *
 
 from parser_app.models import Ad
 
