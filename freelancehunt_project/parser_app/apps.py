@@ -1,5 +1,4 @@
 import os
-from modules._get_ads import run_parser
 
 from django.apps import AppConfig
 
@@ -13,6 +12,7 @@ class ParserAppConfig(AppConfig):
 
     def start_scheduler(self):
         from apscheduler.schedulers.background import BackgroundScheduler
+        from modules.get_ads import run_parser
 
         scheduler = BackgroundScheduler()
 
