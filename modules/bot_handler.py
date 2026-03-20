@@ -82,6 +82,10 @@ def is_owner(user_id: int) -> bool:
     return user_id == TELEGRAM_CHAT_ID
 
 
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    await update.message.reply_text("Дарова")
+
+
 async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     query = update.callback_query
     await query.answer()
@@ -200,6 +204,7 @@ def main():
     )
 
     app.add_handler(conv_handler)
+    app.add_handler(CommandHandler("start", start))
 
     print("🤖 Бот запущено. Очікування повідомлень (Gemini Engine)...")
     app.run_polling(allowed_updates=Update.ALL_TYPES)

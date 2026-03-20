@@ -8,3 +8,4 @@ python-telegram-bot>=20.0
 google-generativeai
 gunicorn
 whitenoise
+honcho
