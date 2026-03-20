@@ -56,6 +56,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'freelancehunt_project.urls'
 
+CSRF_TRUSTED_ORIGINS = ['https://tvoy-proekt.up.railway.app']
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

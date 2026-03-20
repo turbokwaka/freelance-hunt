@@ -6,3 +6,4 @@ curl-cffi
 beautifulsoup4
 python-telegram-bot>=20.0
 google-generativeai
+gunicorn
