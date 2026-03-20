@@ -4,6 +4,6 @@
         "builder": "RAILPACK"
     },
     "deploy": {
-        "startCommand": "cd freelancehunt_project && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn mysite.wsgi"
+        "startCommand": "cd freelancehunt_project && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn freelancehunt_project.wsgi"
     }
 }
