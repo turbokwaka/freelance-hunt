@@ -15,18 +15,16 @@ class ParserAppConfig(AppConfig):
     def start_scheduler(self):
         current_file = Path(__file__).resolve()
         root_dir = current_file.parent.parent.parent
+        modules_path = root_dir / "modules"
 
-        # 2. Додаємо цю папку до шляхів пошуку Python, якщо її там ще немає
-        if str(root_dir) not in sys.path:
-            sys.path.append(str(root_dir))
+        if str(modules_path) not in sys.path:
+            sys.path.append(str(modules_path))
 
         from apscheduler.schedulers.background import BackgroundScheduler
-        from modules.get_ads import run_parser
+        import get_ads
 
         scheduler = BackgroundScheduler()
-
-        # Налаштовуємо запуск, наприклад, кожні 15 хвилин
-        scheduler.add_job(run_parser, 'interval', minutes=5)
+        scheduler.add_job(get_ads.run_parser, 'interval', minutes=5)
 
         scheduler.start()
-        print("Фоновий планувальник APScheduler успішно запущено!")
+        print("✅ Фоновий планувальник APScheduler успішно запущено!")
