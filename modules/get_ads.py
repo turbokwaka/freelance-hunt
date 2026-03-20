@@ -1,6 +1,6 @@
 from .load_django import *
 from parser_app.models import Ad
-from telegram_notify import send_ad_notification
+from .telegram_notify import send_ad_notification
 
 from curl_cffi import requests
 from bs4 import BeautifulSoup
