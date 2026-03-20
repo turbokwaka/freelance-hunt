@@ -1,0 +1,8 @@
+requests
+Django
+psycopg2-binary
+python-dotenv
+curl-cffi
+beautifulsoup4
+python-telegram-bot>=20.0
+google-generativeai
