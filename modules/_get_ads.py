@@ -45,7 +45,7 @@ def get_project_details(url, headers):
         return None
 
 
-def main():
+def run_parser():
     cookie_string = "cookieyes-consent=consentid:U0pYR3owbVB5ZGlxMG4xTWJ2NTBHMGdkcFNHZ0tTRVY,consent:yes,action:no,necessary:yes,functional:yes,analytics:yes,performance:yes,advertisement:yes,other:yes; _gcl_au=1.1.1376940466.1772702324; _ga=GA1.1.2079057660.1772702324; _ga_D5VKDWKRBW=GS2.1.s1773255203$o2$g1$t1773255203$j60$l0$h1255506203$ddd14vSLhmD5D-GHdaarYuX6OEG9HuJufsw; _fbp=fb.1.1773255204259.647839639539222162; _clck=1vbeyty%5E2%5Eg49%5E0%5E2255; _clsk=8s6s39%5E1773255205397%5E1%5E1%5Ev.clarity.ms%2Fcollect"
 
     headers = {
@@ -123,4 +123,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    run_parser()
