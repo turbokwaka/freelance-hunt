@@ -56,7 +56,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'freelancehunt_project.urls'
 
-CSRF_TRUSTED_ORIGINS = ['freelance-hunt-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://freelance-hunt-production.up.railway.app']
 
 TEMPLATES = [
     {
